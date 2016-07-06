@@ -2,6 +2,40 @@ import {it, expect} from "./test_lib";
 
 // Constructors
 // Only add code to *THIS* section!
+function Coffee (brew, full, empty) {
+  if (this.brew === undefined) {
+    this.brew === "unknown";
+  } else {
+    this.brew = brew;
+  }
+  if (this.full === undefined) {
+    this.full = true;
+  } else {
+    this.full = full;
+  }
+  if (this.empty === undefined) {
+    this.empty === false;
+  } else {
+    this.empty = empty;
+  }
+};
+
+function Human (name, alertness, hasCoffee, needsCoffee) {
+  this.name = name;
+  this.alertness = 0.01;
+  this.hasCoffee = false;
+  this.needsCoffee = true;
+  this.buy = function (coffee) {
+    this.hasCoffee = true;
+    this.coffee = coffee;
+  }
+  this.drink = function () {
+    this.alertness = 0.35;
+    var empty = 0;
+    var full = 10;
+    full - 1;
+  }
+};
 
 ///
 ///
@@ -51,3 +85,5 @@ it("can drink all the coffee", function () {
   expect(tsmf.empty).toBe(true);
   expect(rodney.alertness > 0.9).toBe(true);
 });
+
+export {Human, Coffee}
